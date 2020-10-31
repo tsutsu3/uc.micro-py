@@ -16,7 +16,6 @@ setuptools.setup(
     version=version,
     license="MIT",
     author="tsutsu3",
-    author_email="tsutsu3prog@gmail.com",
     description="Micro subset of unicode data files for linkify-it-py projects.",
     long_description=long_description,
     long_description_content_type="text/markdown",

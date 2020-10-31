@@ -1,7 +1,7 @@
 # uc.micro-py
 
-<!-- [![Build Status](https://img.shields.io/travis/markdown-it/uc.micro/master.svg?style=flat)](https://travis-ci.org/markdown-it/uc.micro)
-[![NPM version](https://img.shields.io/npm/v/uc.micro.svg?style=flat)](https://www.npmjs.org/package/uc.micro) -->
+![CI](https://github.com/tsutsu3/uc.micro-py/workflows/CI/badge.svg?branch=main)
+[![codecov](https://codecov.io/gh/tsutsu3/uc.micro-py/branch/main/graph/badge.svg?token=5Y7559D69U)](undefined)
 
 This is a Python port of [uc.micro](https://github.com/markdown-it/uc.micro).
 
