@@ -1,5 +1,6 @@
 # uc.micro-py
 
+![pypi](https://img.shields.io/pypi/v/uc-micro-py)
 ![CI](https://github.com/tsutsu3/uc.micro-py/workflows/CI/badge.svg?branch=main)
 [![codecov](https://codecov.io/gh/tsutsu3/uc.micro-py/branch/main/graph/badge.svg?token=5Y7559D69U)](undefined)
 
