@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 with open(path.join(path.dirname(__file__), "uc_micro", "__init__.py")) as f:
-    match = re.search(r"__version__\s+=\s+(.*)", f.read())
+    match = re.search(r"__version__\s*=\s*[\'\"](.+?)[\'\"]", f.read())
     version = match.group(1)
 
 
@@ -16,7 +16,6 @@ setuptools.setup(
     version=version,
     license="MIT",
     author="tsutsu3",
-    author_email="tsutsu3prog@gmail.com",
     description="Micro subset of unicode data files for linkify-it-py projects.",
     long_description=long_description,
     long_description_content_type="text/markdown",
