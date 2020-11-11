@@ -9,3 +9,9 @@ This is a Python port of [uc.micro](https://github.com/markdown-it/uc.micro).
 > Micro subset of unicode data files for [linkify-it-py](https://github.com/tsutsu3/linkify-it-py) projects.
 
 **This package content is ONLY for [linkify-it-py](https://github.com/tsutsu3/linkify-it-py)projects needs.**
+
+## install
+
+```bash
+pip install uc-micro-py
+```
