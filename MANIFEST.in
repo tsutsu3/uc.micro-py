@@ -1,0 +1,10 @@
+exclude test
+recursive-exclude test *
+
+exclude .pre-commit-config.yaml
+exclude tox.ini
+exclude .flake8
+
+include README.md
+include CHANGELOG.md
+include LICENSE
