@@ -4,6 +4,7 @@
 [![Anaconda-Server Badge](https://anaconda.org/conda-forge/uc-micro-py/badges/version.svg)](https://anaconda.org/conda-forge/uc-micro-py)
 [![CI](https://github.com/tsutsu3/uc.micro-py/workflows/CI/badge.svg?branch=main)](https://github.com/tsutsu3/uc.micro-py/actions)
 [![codecov](https://codecov.io/gh/tsutsu3/uc.micro-py/branch/main/graph/badge.svg?token=5Y7559D69U)](https://codecov.io/gh/tsutsu3/uc.micro-py)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsutsu3%2Fuc.micro-py.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsutsu3%2Fuc.micro-py?ref=badge_shield)
 
 This is a Python port of [uc.micro](https://github.com/markdown-it/uc.micro).
 
@@ -22,3 +23,7 @@ or
 ```bash
 conda install -c conda-forge uc-micro-py
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsutsu3%2Fuc.micro-py.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsutsu3%2Fuc.micro-py?ref=badge_large)
