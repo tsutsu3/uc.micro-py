@@ -9,22 +9,21 @@ on:
 
 jobs:
   pre-commit:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    - uses: pre-commit/action@v2.0.0
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - uses: pre-commit/action@v2.0.0
 
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8, 3.9]
+        python-version: [3.6, 3.7, 3.8, 3.9, 3.10, 3.11]
 
     steps:
       - name: Checkout source
@@ -49,7 +48,7 @@ jobs:
           fail_ci_if_error: true
   publish:
     name: Publish to PyPi
-    needs: [pre-commit,test]
+    needs: [pre-commit, test]
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
     runs-on: ubuntu-latest
     steps:
