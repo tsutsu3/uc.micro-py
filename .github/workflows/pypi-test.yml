@@ -2,6 +2,10 @@ name: PYPI-TEST-PUBLISH
 
 on:
   workflow_dispatch:
+    inputs:
+      TESTPYPI_VESION:
+        description: 'TestPyPI Version'
+        required: true
 
 jobs:
   publish:
@@ -14,6 +18,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.7
+      - name: Replace version
+        run:
+          sed -rie "s/__version__ = \"(.*)\"/__version__ = \"\1.${{ inputs.TESTPYPI_VESION }}\""/g uc_micro/__init__.py
       - name: Build package
         run: |
           pip install build
