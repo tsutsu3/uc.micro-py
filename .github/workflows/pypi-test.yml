@@ -1,0 +1,25 @@
+name: PYPI-TEST-PUBLISH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish to Test PyPi
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.7
+      - name: Build package
+        run: |
+          pip install build
+          python -m build
+      - name: Publish
+        uses: pypa/gh-action-pypi-publish@v1.8.5
+        with:
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_KEY }}

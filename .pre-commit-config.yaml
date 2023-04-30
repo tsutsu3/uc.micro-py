@@ -2,26 +2,20 @@
 # pre-commit install
 
 repos:
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.3.0
     hooks:
-    - id: check-json
-    - id: check-yaml
-    - id: end-of-file-fixer
-    - id: trailing-whitespace
+      - id: check-json
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
 
-  - repo: https://github.com/mgedmin/check-manifest
-    rev: "0.44"
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
     hooks:
-    - id: check-manifest
-
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.4
-    hooks:
-    - id: flake8
+      - id: flake8
 
   - repo: https://github.com/psf/black
-    rev: 20.8b1
+    rev: 23.3.0
     hooks:
-    - id: black
+      - id: black

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uc-micro-py"
+authors = [
+    {name = "tsutsu3"},
+]
+description = "Micro subset of unicode data files for linkify-it-py projects."
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["unicode"]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest", "coverage", "pytest-cov"]
+
+[tool.setuptools.dynamic]
+version = {attr = "uc_micro.__version__"}
