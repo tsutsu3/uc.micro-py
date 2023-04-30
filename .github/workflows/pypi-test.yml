@@ -2,6 +2,10 @@ name: PYPI-TEST-PUBLISH
 
 on:
   workflow_dispatch:
+    inputs:
+      TESTPYPI-VESION:
+        description: 'TestPyPI Version'
+        required: true
 
 jobs:
   publish:
@@ -16,7 +20,7 @@ jobs:
           python-version: 3.7
       - name: Replace version
         run:
-          sed -rie "s/__version__ = \"(.*)\"/__version__ = \"\1+${GITHUB_SHA::6}.0\""/g uc_micro/__init__.py
+          sed -rie "s/__version__ = \"(.*)\"/__version__ = \"\1.${github.event.inputs.TESTPYPI-VESION}\""/g uc_micro/__init__.py
       - name: Build package
         run: |
           pip install build
