@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.0.2 (2023-04-30)
+
+- Update development tools
+- Fix sdist is missing tests
+
 ## v1.0.1 (2020-12-15)
 
 - Add pre-commit, thanks to [@chrisjsewell ](https://github.com/chrisjsewell).
