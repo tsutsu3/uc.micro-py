@@ -47,6 +47,15 @@ jobs:
           flags: pytests
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Build package test
+        run: |
+          pip install build
+          python -m build
+      - name: Build package test (with tmp folder)
+        run: |
+          mkdir tmp
+          pip install build
+          python -m build
 
   publish:
     name: Publish to PyPi
