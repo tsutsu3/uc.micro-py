@@ -51,11 +51,23 @@ jobs:
         run: |
           pip install build
           python -m build
+          if [ $(grep -o "\.py" uc_micro_py.egg-info/SOURCES.txt | wc -l) -eq 14 ]; then
+              echo "Success build"
+          else
+              echo "Failed build"
+              exit 1
+          fi
       - name: Build package test (with tmp folder)
         run: |
           mkdir tmp
           pip install build
           python -m build
+          if [ $(grep -o "\.py" uc_micro_py.egg-info/SOURCES.txt | wc -l) -eq 14 ]; then
+              echo "Success build"
+          else
+              echo "Failed build"
+              exit 1
+          fi
 
   publish:
     name: Publish to PyPi
