@@ -29,8 +29,9 @@ dynamic = ["version"]
 [project.optional-dependencies]
 test = ["pytest", "coverage", "pytest-cov"]
 
-[tool.setuptools]
-packages = ["uc_micro"]
+[tool.setuptools.packages.find]
+include = ["uc_micro*"]
+namespaces = false
 
 [tool.setuptools.dynamic]
 version = { attr = "uc_micro.__version__" }
