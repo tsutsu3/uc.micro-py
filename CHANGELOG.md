@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.0.3 (2024-02-10)
+
+- Fix trashed build [#17](https://github.com/tsutsu3/uc.micro-py/issues/17)
+- Update CI
+
 ## v1.0.2 (2023-04-30)
 
 - Update development tools
