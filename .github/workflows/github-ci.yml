@@ -41,7 +41,7 @@ jobs:
           pytest --cov=uc_micro --cov-report=xml --cov-report=term-missing
       - name: Upload to Codecov
         if: matrix.python-version == 3.8 && github.repository == 'tsutsu3/uc.micro-py'
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           name: uc.micro-py-pytests-py3.8
           flags: pytests
