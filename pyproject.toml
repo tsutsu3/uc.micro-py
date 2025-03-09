@@ -7,18 +7,18 @@ name = "uc-micro-py"
 authors = [{ name = "tsutsu3" }]
 description = "Micro subset of unicode data files for linkify-it-py projects."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 keywords = ["unicode"]
 license = { text = "MIT" }
 urls = { Homepage = "https://github.com/tsutsu3/uc.micro-py" }
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Intended Audience :: Developers",

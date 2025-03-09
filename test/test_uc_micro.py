@@ -18,7 +18,7 @@ def test_Cc():
 def test_Cf():
     from uc_micro.categories import Cf
 
-    assert re.search(Cf.REGEX, "\xAD")
+    assert re.search(Cf.REGEX, "\xad")
     assert not re.search(Cf.REGEX, "A")
 
 
