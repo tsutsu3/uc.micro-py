@@ -77,6 +77,9 @@ jobs:
     needs: [pre-commit, test]
     if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
     runs-on: ubuntu-latest
+    environment: prod
+    permissions:
+      id-token: write
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
@@ -88,8 +91,5 @@ jobs:
         run: |
           pip install build
           python -m build
-      - name: Publish
+      - name: Publish package distributions to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_KEY }}
