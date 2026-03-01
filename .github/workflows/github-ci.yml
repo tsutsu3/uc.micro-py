@@ -13,17 +13,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - name: Set up Python 3.9
+      - name: Set up Python 3.12
         uses: actions/setup-python@v6
         with:
-          python-version: 3.9
+          python-version: 3.12
       - uses: pre-commit/action@v3.0.1
 
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
 
     steps:
       - name: Checkout source
@@ -40,10 +40,10 @@ jobs:
         run: |
           pytest --cov=uc_micro --cov-report=xml --cov-report=term-missing
       - name: Upload to Codecov
-        if: matrix.python-version == 3.9 && github.repository == 'tsutsu3/uc.micro-py'
+        if: matrix.python-version == 3.12 && github.repository == 'tsutsu3/uc.micro-py'
         uses: codecov/codecov-action@v5
         with:
-          name: uc.micro-py-pytests-py3.9
+          name: uc.micro-py-pytests-py3.12
           flags: pytests
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
@@ -77,10 +77,10 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
-      - name: Set up Python 3.9
+      - name: Set up Python 3.12
         uses: actions/setup-python@v6
         with:
-          python-version: 3.9
+          python-version: 3.12
       - name: Build package
         run: |
           pip install build
