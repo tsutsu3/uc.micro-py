@@ -11,9 +11,14 @@ permissions:
   contents: read
 
 jobs:
-  publish:
+  pypi-publish:
     name: Publish to Test PyPi
     runs-on: ubuntu-latest
+    environment:
+      name: test
+      url: https://test.pypi.org/project/uc-micro-py/
+    permissions:
+      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
@@ -32,5 +37,3 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           repository-url: https://test.pypi.org/legacy/
-          user: __token__
-          password: ${{ secrets.TEST_PYPI_KEY }}
