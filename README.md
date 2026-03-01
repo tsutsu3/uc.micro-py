@@ -13,19 +13,8 @@ This is a Python port of [uc.micro](https://github.com/markdown-it/uc.micro).
 
 ## Python Version Support
 
-This project is tested against the following Python versions:
-
-| Version |                              Status                              |
-| ------- | ---------------------------------------------------------------- |
-| 3.14    | ![bugfix](https://img.shields.io/badge/bugfix-blue)              |
-| 3.13    | ![bugfix](https://img.shields.io/badge/bugfix-blue)              |
-| 3.12    | ![security](https://img.shields.io/badge/security-yellow) ★ main |
-| 3.11    | ![security](https://img.shields.io/badge/security-yellow)        |
-| 3.10    | ![security](https://img.shields.io/badge/security-yellow)        |
-
-**Main version**: The latest Python version in the [security phase](https://devguide.python.org/versions/)
-(i.e., the most recent version whose bugfix period has ended) is used as the primary version
-for code coverage reporting. Currently **3.12**.
+Tested on Python 3.10–3.14. The primary version for code coverage follows the latest
+[security phase](https://devguide.python.org/versions/) release (currently **3.12**).
 
 ## install
 
